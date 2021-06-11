@@ -1,0 +1,20 @@
+import numpy as np
+import cv2
+
+photo1 = cv2.imread("mickey-main.jpg")
+photo2 = cv2.imread("blue.jpg")
+
+crop1 = photo1[300:500,300:500]
+
+photo1.shape
+photo1.shape
+
+crop1.shape
+cv2.imshow("crop",crop1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+photo2[300:500,300:500] = crop1
+cv2.imshow("Swap",photo2)
+cv2.waitKey()
+cv2.destroyAllWindows()
